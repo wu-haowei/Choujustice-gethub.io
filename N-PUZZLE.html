@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        body {
+            color: #ffffff;
+            background: #20262e;
+  
+        }
+    </style>
+</head>
+
+<body>
+<div class="d-flex justify-content-center">
+    <canvas class=""></canvas>
+    <img src="https://picsum.photos/500/400/?random1" class="">
+</div>
+    <script>
+        (function () {
+            /* HTML DOM */
+            let canvas = document.getElementsByTagName("canvas")[0];
+            let context = canvas.getContext("2d");
+
+            /* 常數 */
+            const LEVEL = 20;                 // 隨機打亂的步數
+            const RECORD_SIZE = 1000;         // 紀錄的尺寸
+            const N = 3;                      // 拼圖尺寸
+            const SPEED = 50;                 // 動畫速度
+            const ACTIONS = {                 // 動作常數
+                UP: 0,
+                RIGHT: 1,
+                DOWN: 2,
+                LEFT: 3
+            };
+
+            // 圖片位置
+            const IMAGE_URL = "https://picsum.photos/500/400/?random1";
+
+            /* 拼圖圖片*/
+            let image = new Image();
+            image.src = IMAGE_URL;
+
+            /* 繪製拼圖 */
+            let refresh = function (s) {
+                canvas.width = image.width;
+                canvas.height = image.height;
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                let k = N * N;
+                let w = Math.floor(image.width / N);
+                let h = Math.floor(image.height / N);
+                for (let i = 0; i < k; i++) {
+                    let index = s[i];
+                    if (index != 0) {
+                        let x = column(N, i) * w;
+                        let y = row(N, i) * h;
+                        let sx = column(N, index) * w;
+                        let sy = row(N, index) * h;
+                        context.drawImage(image, sx, sy, w, h, x, y, w, h);
+                    }
+                }
+            };
+
+            /* 檢查範圍 */
+            Math.include = function (v, a, b) {
+                return v >= a && v < b;
+            };
+
+            /* 交換元素 */
+            Array.prototype.swap = function (i, j) {
+                let t = this[i];
+                this[i] = this[j];
+                this[j] = t;
+            };
+
+            /* 陣列相等 */
+            Array.prototype.equal = function (array) {
+                if (array.length != this.length) {
+                    return false;
+                }
+                for (let i = 0; i < this.length; i++) {
+                    if (this[i] != array[i]) {
+                        return false;
+                    }
+                }
+                return true;
+            };
+
+            /* 註標轉換成列 */
+            let row = function (n, index) {
+                return Math.floor(index / n);
+            };
+
+            /* 註標轉換成行 */
+            let column = function (n, index) {
+                return index % n;
+            };
+
+            /* 操作動作 */
+            let move = function (s, a) {
+                let nextS = Array.from(s);
+                let p = s.indexOf(0);
+                switch (a) {
+                    case ACTIONS.UP:
+                        if (Math.include(row(N, p - N), 0, N)) {
+                            nextS.swap(p, p - N);
+                        }
+                        break;
+                    case ACTIONS.RIGHT:
+                        if (row(N, p) == row(N, p + 1)) {
+                            nextS.swap(p, p + 1);
+                        }
+                        break;
+                    case ACTIONS.DOWN:
+                        if (Math.include(row(N, p + N), 0, N)) {
+                            nextS.swap(p, p + N);
+                        }
+                        break;
+                    case ACTIONS.LEFT:
+                        if (row(N, p) == row(N, p - 1)) {
+                            nextS.swap(p, p - 1);
+                        }
+                        break;
+                }
+                return nextS;
+            };
+
+            /* 生成初始化盤面 */
+            let initialize = function (n, step) {
+                n = n * n;
+                let s = Array.from({ length: n }, (_, i) => i);
+                let keys = Object.keys(ACTIONS);
+                for (let i = 0; i < step; i++) {
+                    let k = keys[Math.floor(Math.random() * keys.length)];
+                    let a = ACTIONS[k];
+                    s = move(s, a);
+                }
+                return s;
+            };
+
+            /* 確認完成目標 */
+            let goal = function (s) {
+                return Array.from({ length: s.length }, (_, i) => i).equal(s);
+            };
+
+            /* 檢查存在盤面 */
+            let have = function (array, s) {
+                for (let v of array) {
+                    if (v.equal(s)) {
+                        return true;
+                    }
+                }
+                return false;
+            };
+
+            /* 紀錄佇列 */
+            let record = [];
+
+            /* 求解盤面 */
+            let resolve = function (state, h) {
+                let actions = Object.keys(ACTIONS);
+                let bestH = Number.MAX_SAFE_INTEGER;
+                let bestState = null;
+                if (record.length > RECORD_SIZE) {
+                    record.shift();
+                }
+                record.push(state);
+                for (let i of actions) {
+                    let nextState = move(state, ACTIONS[i]);
+                    if (!have(record, nextState)) {
+                        if (h(nextState) < bestH) {
+                            bestState = nextState;
+                        }
+                    }
+                }
+                if (bestState == null) {
+                    let i = Math.floor(Math.random() * actions.length);
+                    bestState = move(state, ACTIONS[actions[i]]);
+                }
+                return bestState;
+            };
+
+            /* 策略與初始盤面 */
+            let S = initialize(N, LEVEL);
+            let h = function (s) {
+                return s.map((e, i) => {
+                    if (i != 0) {
+                        let a = Math.abs(row(N, e) - row(N, i));
+                        let b = Math.abs(column(N, e) - column(N, i));
+                        return a + b;
+                    }
+                    return 0;
+                }).reduce((p, c) => p + c);
+            };
+
+            /* 當圖片載入完成則動作 */
+            image.onload = function () {
+                let state = S;
+                let interval = setInterval(function () {
+                    refresh(state);
+                    if (goal(state)) {
+                        clearInterval(interval);
+                    }
+                    else {
+                        state = resolve(state, h);
+                    }
+                }, SPEED);
+            };
+        })();
+    </script>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="./calendar.css">
+        <title>日曆</title>
+    </head>
+
+<body class="">
+    <h1 class="d-flex justify-content-center">日曆</h1>
+    <div class="d-flex justify-content-around">
+        <button id="prev" type="button" class="btn btn-dark mr-30px">上個月</button>
+        <button id="next" type="button" class="btn btn-dark mr-30px">下個月</button>
+    </div>
+    <div id="calendar">
+        <h2>2021年4月</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                    <th>日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td bgcolor="gray">29</td>
+                    <td bgcolor="gray">30</td>
+                    <td bgcolor="gray">31</td>
+                    <td class="button" data-toggle="modal" data-target="#exampleModal">1</td>
+                    <td class="button">2</td>
+                    <td class="button">3</td>
+                    <td class="button">4</td>
+                </tr>
+                <tr>
+                    <td class="button">5</td>
+                    <td class="button">6</td>
+                    <td class="button">7</td>
+                    <td class="button">8</td>
+                    <td class="button">9</td>
+                    <td class="button">10</td>
+                    <td class="button">11</td>
+                </tr>
+                <tr>
+                    <td class="button">12</td>
+                    <td class="button">13</td>
+                    <td class="button">14</td>
+                    <td class="button">15</td>
+                    <td class="button">16</td>
+                    <td class="button">17</td>
+                    <td class="button">18</td>
+                </tr>
+                <tr>
+                    <td class="button">19</td>
+                    <td class="button">20</td>
+                    <td class="button">21</td>
+                    <td class="button">22</td>
+                    <td class="button">23</td>
+                    <td class="button text-white bg-info">24</td>
+                    <td class="button">25</td>
+                </tr>
+                <tr>
+                    <td class="button">26</td>
+                    <td class="button">27</td>
+                    <td class="button">28</td>
+                    <td class="button">29</td>
+                    <td class="button">30</td>
+                    <td bgcolor="gray">1</td>
+                    <td bgcolor="gray">2</td>
+                </tr>
+                <tr>
+                    <td bgcolor="gray">3</td>
+                    <td bgcolor="gray">4</td>
+                    <td bgcolor="gray">5</td>
+                    <td bgcolor="gray">6</td>
+                    <td bgcolor="gray">7</td>
+                    <td bgcolor="gray">8</td>
+                    <td bgcolor="gray">9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">2021年4月1日-記事本</h5>
+                    <button id="x" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1 id="description" class="text-primary"></h1>
+                    <textarea id="textarea" cols="40" rows="5" placeholder="輸入記事本內容" aria-label="輸入記事本內容"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button id="close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="save" type="button" class="btn btn-primary">Save</button>
+                    <button id="modify" type="button" class="btn btn-warning">Modify</button>
+                    <button id="delete" type="button" class="btn btn-danger">Delete</button>
+                    <button id="deleteall" type="button" class="btn btn-danger">DeleteAll</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script type="module">
+        import { $g, $c } from '/Modules/heipers.js';
+
+        let d = new Date();
+
+        let h2 = $c('h2');
+        h2.innerText = get_yyyy_mm(d);
+        let calendar = $g('#calendar');
+        calendar.append(h2);
+        create_table();
+
+        //點上一個月觸發換月
+        document.getElementById('prev').addEventListener("click", function () {
+            clickbutton(-1);
+        });
+
+        //點下一個月觸發換月
+        document.getElementById('next').addEventListener("click", function () {
+            clickbutton(1);
+        });
+
+        function clickbutton(AddOrMinus) {
+            d.setDate(15);
+            d.setMonth(d.getMonth() + AddOrMinus);
+            // console.log(d);
+            let calendar = $g('#calendar');
+            calendar.innerText = "";
+            let h2 = $c('h2');
+            h2.innerText = get_yyyy_mm(d);
+            calendar.append(h2);
+            create_table();
+        }
+
+        function get_yyyy_mm(d) {
+            let yyyy = d.getFullYear();
+            let mm = d.getMonth() + 1;
+            return `${yyyy}年${mm}月`;
+        }
+
+        function create_table() {
+            let calendar = $g('#calendar');
+            let table = $c('table');
+            table.setAttribute('class', 'table table-bordered');
+            create_thead(table);
+            create_tbody(table);
+
+            calendar.append(table);
+        }
+
+        function create_thead(table) {
+            let thead = $c('thead');
+            create_tr_th(thead);
+            table.append(thead);
+        }
+
+        function create_tbody(table) {
+            let tbody = $c('tbody');
+            create_tr_td(tbody);
+            table.append(tbody);
+        }
+
+        function create_tr_th(thead) {
+            let tr = $c('tr');
+            for (let j = 1; j <= 7; j++) {
+                let th = document.createElement('th');
+                if (j == 1) {
+                    th.innerText = "一";
+                }
+                else if (j == 2) {
+                    th.innerText = "二";
+                }
+                else if (j == 3) {
+                    th.innerText = "三";
+                }
+                else if (j == 4) {
+                    th.innerText = "四";
+                }
+                else if (j == 5) {
+                    th.innerText = "五";
+                }
+                else if (j == 6) {
+                    th.innerText = "六";
+                }
+                else {
+                    th.innerText = "日";
+                }
+                tr.append(th);
+            }
+            thead.append(tr);
+        }
+
+        //設定tbody內容
+        function create_tr_td(tbody) {
+            for (let i = 0; i < 6; i++) {
+                let dayArray = setday(d);
+                let tr = document.createElement('tr');
+
+                for (let j = 0; j < 7; j++) {
+                    let td = document.createElement('td');
+                    let yyyy = dayArray[i * 7 + j][0];
+                    let mm = dayArray[i * 7 + j][1];
+                    let dd = dayArray[i * 7 + j][2];
+                    td.innerText = dd;
+                    if (checkPreNext(yyyy, mm, dd, d) == true) {
+                        td.bgColor = "gray";
+                        tr.append(td);
+                    }
+                    else if (checkNotebook(`${yyyy}${mm}${dd}`) != null) {
+                        td.setAttribute("class", "button text-white bg-danger");
+                        //設定button Modal
+                        Notebook(yyyy, mm, dd, td);
+                        tr.append(td);
+                    }
+                    else if (checkToday(yyyy, mm, dd) == true) {
+                        td.setAttribute("class", "button text-white bg-info");
+                        //設定button Modal
+                        Notebook(yyyy, mm, dd, td);
+                        tr.append(td);
+                    }
+
+                    else {
+                        td.setAttribute("class", "button");
+                        //設定button Modal
+                        Notebook(yyyy, mm, dd, td);
+                        tr.append(td);
+                    }
+
+                }
+
+                tbody.append(tr);
+
+            }
+        }
+
+        //設定新增button記事本內容
+        function Notebook(yyyy, mm, dd, td) {
+            //modal設定
+            td.addEventListener('click', function () {
+                this.setAttribute('data-toggle', 'modal');
+                this.setAttribute('data-target', '#exampleModal');
+                let modal = $g('#exampleModal');
+                modal.querySelector('h5').innerText = `${yyyy}年${mm}月${dd}日-記事本`;
+                // modal.querySelector('#description').innerText = `${yyyy}, ${mm}, ${dd}`;
+
+                let storage = window.localStorage;
+                let day = `${yyyy}${mm}${dd}`;
+                let note = localStorage.getItem(day);
+                modal.querySelector('#description').innerText = note;
+                modal.querySelector('#description').value = day;
+            });
+        }
+
+        //判斷那天記事本是否有內容
+        function checkNotebook(yyyymmdd) {
+            let storage = window.localStorage;
+            let note = localStorage.getItem(yyyymmdd);
+            // console.log(note);
+            return note;
+        }
+        // console.log(checkNotebook(2021423));
+
+
+        //上個月最後一天的[月,日,星期]
+        function LastDayPrevMonth(d) {
+            let yyyy = d.getFullYear();
+            let mm = d.getMonth();
+            let FirstDay = new Date(yyyy, mm, 1);
+            let LastDayMonth = new Date(yyyy, mm, 0);
+            return [LastDayMonth.getFullYear(), LastDayMonth.getMonth() + 1, LastDayMonth.getDate(), LastDayMonth.getDay()];
+        }
+
+        //下個月最後一天的[月,日,星期]
+        function FirstDayNextMonth(d) {
+            let yyyy = d.getFullYear();
+            let mm = d.getMonth() + 1;
+            let FirstDay = new Date(yyyy, mm, 1);
+            return [FirstDay.getFullYear(), FirstDay.getMonth() + 1, FirstDay.getDate(), FirstDay.getDay()];
+        }
+
+        //這個月最後一天的[月,日,星期]
+        function LastDayThisMonth(d) {
+            let yyyy = d.getFullYear();
+            let mm = d.getMonth() + 1;
+            let FirstDay = new Date(yyyy, mm, 1);
+            let LastDayMonth = new Date(yyyy, mm, 0);
+            return [LastDayMonth.getFullYear(), LastDayMonth.getMonth() + 1, LastDayMonth.getDate(), LastDayMonth.getDay()];
+        }
+
+        //這個月第一天的[月,日,星期]
+        function FirstDayThisMonth(d) {
+            let yyyy = d.getFullYear();
+            let mm = d.getMonth();
+            let FirstDay = new Date(yyyy, mm, 1);
+            return [FirstDay.getFullYear(), FirstDay.getMonth() + 1, FirstDay.getDate(), FirstDay.getDay()];
+        }
+
+        // console.log(LastDayPrevMonth(d));
+        // console.log(FirstDayNextMonth(d));
+        // console.log(LastDayThisMonth(d));
+        // console.log(FirstDayThisMonth(d));
+
+
+        //設定日曆上面的日期
+        function setday(d) {
+            let dayArr = new Array();
+            let thisMonthFirstDay = FirstDayThisMonth(d);
+            let thisMonthLastDay = LastDayThisMonth(d);
+            let lastMonthLastDay = LastDayPrevMonth(d);
+            let nextMonthFirstDay = FirstDayNextMonth(d);
+
+            if (thisMonthFirstDay[3] == 1)  //這個月第一天為星期一時
+            {
+                let count = 0;
+                for (let i = 1; i <= thisMonthLastDay[2]; i++) {
+                    dayArr.push([thisMonthLastDay[0], thisMonthLastDay[1], i]);
+                    count++;
+                }
+
+                let count2 = count;
+                for (let j = 1; j <= (42 - count2); j++) {
+                    dayArr.push([nextMonthFirstDay[0], nextMonthFirstDay[1], j]);
+                    count++;
+                }
+            }
+            else  //這個月第一天不為星期一時
+            {
+                let count = 0;
+                for (let i = 1; i <= lastMonthLastDay[3]; i++) {
+                    dayArr.push([lastMonthLastDay[0], lastMonthLastDay[1], lastMonthLastDay[2] - lastMonthLastDay[3] + i]);
+                    count++;
+                    // console.log(count);
+                }
+                for (let j = 1; j <= thisMonthLastDay[2]; j++) {
+                    dayArr.push([thisMonthLastDay[0], thisMonthLastDay[1], j]);
+                    count++;
+                    // console.log(count);
+                }
+
+                let count2 = count;
+                for (let k = 1; k <= (42 - count2); k++) {
+                    dayArr.push([nextMonthFirstDay[0], nextMonthFirstDay[1], k]);
+                    count++;
+                    // console.log(count);
+                }
+            }
+
+            return dayArr;
+        }
+
+        //判斷是否為今天
+        function checkToday(yyyy, mm, dd) {
+            let d = new Date();
+            if (d.getFullYear() == yyyy && (d.getMonth() + 1) == mm && d.getDate() == dd) {
+                return true;
+            }
+
+            else return false;
+        }
+
+        //判斷上下月份
+        function checkPreNext(yyyy, mm, dd, d) {
+            let nextMon = new Date(d);
+            let preMon = new Date(d);
+            nextMon.setMonth(nextMon.getMonth() + 1);
+            preMon.setMonth(preMon.getMonth() - 1);
+
+            //判斷要加1因為月份從0開始
+            if (preMon.getFullYear() == yyyy && preMon.getMonth() + 1 == mm) {
+                // console.log(true);
+                return true;
+            }
+            else if (nextMon.getFullYear() == yyyy && nextMon.getMonth() + 1 == mm) {
+                // console.log(true);
+                return true;
+            }
+            else {
+                // console.log(false);
+                return false;
+            }
+        }
+
+        //設定按Close後清空textarea內容
+        let close = $g('#close');
+        close.addEventListener('click', function () {
+            let textarea = $g('#textarea');
+            textarea.value = "";
+        });
+
+        //設定按x後清空textarea內容
+        let x = $g('#x');
+        x.addEventListener('click', function () {
+            let textarea = $g('#textarea');
+            textarea.value = "";
+        });
+
+        //設定按Delete後清除當天資料
+        let del = $g('#delete');
+        del.addEventListener('click', function () {
+            let storage = window.localStorage;
+            let h1 = $g('#description');
+            let day = h1.value;
+            localStorage.removeItem(day);
+            let note2 = localStorage.getItem(day);
+            h1.innerText = note2;
+            clickbutton(0);
+        });
+
+        //設定save後儲存資料
+        let save = $g('#save');
+        save.addEventListener('click', function () {
+            let textarea = $g('#textarea');
+            let h1 = $g('#description');
+            let day = h1.value;
+            if (textarea.value == "") {
+                //沒資料儲存就不動作
+            }
+            // console.log(day);
+            else {
+                localStorage.setItem(day, textarea.value);
+            }
+            let note2 = localStorage.getItem(day);
+            h1.innerText = note2;
+            clickbutton(0);
+        });
+
+        //設定按DeleteAll後清除所有資料
+        let delall = $g('#deleteall');
+        delall.addEventListener('click', function () {
+            let storage = window.localStorage;
+            localStorage.clear();
+            let h1 = $g('#description');
+            let day = h1.value;
+            let note2 = localStorage.getItem(day);
+            h1.innerText = note2;
+            clickbutton(0);
+        });
+
+        //設定按Modify後取得資料
+        let modify = $g('#modify');
+        modify.addEventListener('click', function () {
+            let storage = window.localStorage;
+            let h1 = $g('#description');
+            let day = h1.value;
+            let note2 = localStorage.getItem(day);
+            let textarea = $g('#textarea');
+            textarea.value = note2;
+        });
+
+
+    </script>
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

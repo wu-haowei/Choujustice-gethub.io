@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/fa7210dc77.js"></script>
+    <title>Hello, world!</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .container {
+            
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #2b3238;
+        }
+
+        .row1 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .row2 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+        .row2>div{
+            width: 75%;
+        }
+
+        .row1_text {
+            width: 50%;
+        }
+
+        .form-control,
+        .email {
+            background-color: #2b3238;
+            border: none;
+        }
+
+        .form-control,
+        .email,div>label {
+            border-bottom: 1px solid #fff;
+            
+            padding: 0;
+    border-radius: 0;
+        }
+        input ,textarea{
+            color: #fff;
+
+        }
+        input-placeholder{color: red;}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container ">
+        <div class="row row1 col-md-6">
+            <div class="row1_text">
+                <div>
+                    <span>Contact Details</span>
+                </div>
+                <div>
+                    <p>If you are interested in working with us then please drop us a line, we would love to hear from
+                        you.
+                    </p>
+                </div>
+                <div>
+                    <span><i class="fa fa-bicycle pe-3" aria-hidden="true"></i>121 Wallstreet Street, New York , USA</span>
+                </div>
+                <div>
+                    <span><i class="fa fa-bicycle pe-3" aria-hidden="true"></i>info@imperion.com</span>
+                </div>
+                <div>
+                    <span><i class="fa fa-bicycle pe-3" aria-hidden="true"></i>+800 1234 56 78</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row row2 col-md-6">
+            <div class="">
+                <div>
+                    <span>CONTACT US</span>
+                </div>
+                <div class="">
+                    <label for="exampleFormControlInput1" class="form-label"></label>
+                    <input type="" class="form-control" id="exampleFormControlInput1" placeholder="Name" style="background-color: #2b3238 ">
+                </div>
+                <div class="">
+                    <label for="exampleFormControlInput1" class="form-label"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" style="background-color: #2b3238">
+                </div>
+                <div class="">
+                    <label for="exampleFormControlTextarea1" class="form-label" ></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Message" style="background-color: #2b3238"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">send message</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

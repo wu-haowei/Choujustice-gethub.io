@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>手機網站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .fs-7 {
+            font-size: 12px;
+        }
+
+        .border-gray {
+            border: 0.5px solid rgb(168, 167, 167);
+        }
+
+        .border-bottom-gray {
+            border-bottom: 0.5px solid rgb(168, 167, 167);
+        }
+
+        #product-red {
+            height: 24px;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fuild ">
+        <div class="row justify-content-center text-white bg-dark m-0">
+            <div class="col-3">
+                <nav>
+                    <ul class=" justify-content-around d-flex my-2">
+                        <li><a href="#">iphone</a></li>
+                        <li><a href="#">pad</a></li>
+                        <li><a href="#">mac</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="continer-fuild ">
+        <div class="row justify-content-center ">
+            <div class="col-md-12 col-lg-5 d-flex justify-content-center h-50 flex-wrap">
+                <div class="img-box">
+                    <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-white-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956148115"
+                        alt="" class="d-block img">
+                    <span class="fs-2 money">價格:NT$19,900</span>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-5 ">
+                <h1 class="fs-2 mt-5"><strong>購買 iPhone 11</strong></h1>
+
+                <h2 class="fs-6 pt-2"><b>選擇規格</b></h2>
+                <div class="format-box">
+                </div>
+                <h2 class="fs-6 pt-2"><b>選擇外觀</b></h2>
+                <!-- ---------------------------------------顏色----------------------------------- -->
+                <div class="color-box">
+                    <!-- <div class="row my-4">
+    
+                </div>
+                <!-- -----------------------------------顏色------------------------------ -->
+                    <div class="row">
+                        <div class="col-8 d-flex border-bottom ">
+                            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-8-red-logo-201809?wid=85&hei=24&fmt=png-alpha&.v=1568912469853"
+                                alt="" id="product-red">
+                            <p class="fs-7">每筆 iPhone 11 (PRODUCT)RED 銷售，都會直接捐助 The Global Fund 基金，以幫助對抗新冠肺炎。</p>
+                        </div>
+                    </div>
+                    <h2 class="fs-6 pt-2 my-3"><b>選擇儲存容量。</b></h2>
+                    <div class="size-box">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let color = [
+                { web: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-white-201909?wid=48&hei=48&fmt=jpeg&qlt=95&.v=1566845577171", color: "白色", picture: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-white-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956148115" },
+                { web: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-black-201909?wid=48&hei=48&fmt=jpeg&qlt=95&.v=1566845576613", color: "黑色", picture: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-black-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956144418" },
+                { web: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-green-201909?wid=48&hei=48&fmt=jpeg&qlt=95&.v=1566845578161", color: "綠色", picture: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-green-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956144838" },
+                { web: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-yellow-201909?wid=48&hei=48&fmt=jpeg&qlt=95&.v=1566845577261", color: "黃色", picture: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-yellow-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1568141245782" },
+                { web: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-purple-201909?wid=48&hei=48&fmt=jpeg&qlt=95&.v=1566845577680", color: "紫色", picture: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-purple-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566960958082" },
+                { web: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-red-201909?wid=48&hei=48&fmt=jpeg&qlt=95&.v=1566845577098", color: "紅色", picture: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-red-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956144763" }
+            ]
+
+            let size = [
+                { size: 64, money: "NT$19,900" },
+                { size: 128, money: "NT$21,500" },
+                { size: 256, money: "NT$25,000" }
+            ]
+            let format = [
+                { format: "iPhone 11" }
+            ]
+            let color_num = 0;
+            let color_box = document.querySelector(".color-box");
+            let format_box = document.querySelector(".format-box");
+            for (let i = 0; i < format.length; i++) {
+                format_box.innerHTML = ` <div class="row my-4">
+                            <div class="col-8 ">
+                                <button class="w-100 h-100 py-4 bg-white border-gray btn0">
+                                    
+                                    <span class="fs-1 d-flex justify-content-start ps-4">${format[i].format}</span>
+                                </button>
+                            </div>
+                    </div>`
+            }
+
+            for (let i = 0; i < color.length / 2; i++) {
+                //創造row架構
+                let row = document.createElement("div");
+                row.classList.add("row", "my-4");
+                for (let j = 0; j < 2; j++) {
+                    let col_4 = document.createElement("div");
+                    col_4.classList.add("col-4");
+                    let btn = document.createElement("button");
+                    btn.setAttribute("name", "color");
+                    btn.classList.add("w-100", "h-100", "py-4", "bg-white", "border-gray", "btn1");
+                    col_4.appendChild(btn);
+                    let img = document.createElement("img");
+                    img.setAttribute("src", color[color_num].web);
+                    let span = document.createElement("span");
+                    span.innerText = color[color_num].color;
+                    span.classList.add("d-block", "fs-7");
+                    btn.appendChild(img);
+                    btn.appendChild(span);
+                    row.appendChild(col_4);
+                    // console.log(row);
+                    color_num++;
+                }
+                color_box.appendChild(row);
+            }
+            //總共要幾個ROW裝規格
+            let size_box = document.querySelector(".size-box");
+            let size_num = size.length;
+            let size_zero = 0;
+            for (let i = 0; i < 2; i++) {
+                let row = document.createElement("div");
+                row.classList.add("row", "my-4");
+                for (let j = 0; j < 2; j++) {
+                    let col_4 = document.createElement("div");
+                    col_4.classList.add("col-4");
+                    let btn = document.createElement("button");
+                    btn.setAttribute("name", "size");
+                    btn.classList.add("w-100", "h-100", "py-4", "bg-white", "border-gray", "btn2");
+                    btn.innerHTML = ` <b><span class="fs-2 d-block">${size[size_zero].size}<small class="fs-5">GB<sup>**</sup></small></span></b><span class="fs-7">${size[size_zero].money}</span>`;
+                    col_4.appendChild(btn);
+                    row.appendChild(col_4);
+                    size_num--;
+                    size_zero++;
+                    if (size_num == 0) {
+                        size_box.appendChild(row);
+                        break;
+                    }
+                }
+                size_box.appendChild(row);
+            }
+
+            var btns_1 = document.querySelectorAll('.btn1');
+            btns_1.forEach((item, index) => {
+                item.addEventListener('click', function (e) {
+                    let img = document.querySelector(".img");
+                    img.setAttribute("src", color[index].picture);
+                    btns_1.forEach(Object => Object.setAttribute('style', ''))
+                    //把每一個btn1的style清空
+                    let _btn = e.path[0].closest('button')
+                    _btn.setAttribute('style', 'border:3px solid red')
+                    console.log(e)
+                })
+            })
+            var btns_2 = document.querySelectorAll('.btn2');
+            // console.warn(btn2)
+            btns_2.forEach((item, index) => {
+                item.addEventListener('click', function (e) {
+                    // let money = document.querySelector(".money");
+                    // money.innerHTML = "價格:" + size[index].money;
+                    btns_2.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('button')
+                    _btn.setAttribute('style', 'border:3px solid blue')
+                    console.log(e)
+                })
+                
+            })
+            var btns_0 = document.querySelectorAll('.btn0');
+            btns_0.forEach((item, index) => {
+                item.addEventListener('click', function (e) {
+
+                    btns_0.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('button')
+                    _btn.setAttribute('style', 'border:3px solid orange')
+                    console.log(e)
+                })
+            })
+
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

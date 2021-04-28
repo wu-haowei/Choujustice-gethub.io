@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/Owl Carousel 2貓頭鷹/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Owl Carousel 2貓頭鷹/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random1" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random2" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random3" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random4" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random5" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random6" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random7" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random8" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random9" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random10" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random11" alt=""></h4>
+        </div>
+        <div class="item">
+            <h4><img src="https://picsum.photos/300/200/?random12" alt=""></h4>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="Owl Carousel 2貓頭鷹/OwlCarousel2-2.3.4/docs_src/assets/vendors/jquery.min.js"></script>
+    <script src="/Owl Carousel 2貓頭鷹/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+    <script>
+
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 4,/*顯示張數*/
+            loop: true,
+            margin: 10,
+            autoplay: true,/*自動撥放*/
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true
+        });
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [1000])
+        })
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay')
+        })
+
+
+    </script>
+</body>
+
+</html>

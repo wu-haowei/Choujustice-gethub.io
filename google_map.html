@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUIzshuil2vxBR475q-mOhkWLqCk1RetI&callback=initMap&libraries=&v=weekly"
+        async></script>
+
+    <script>
+        const url_1 = 'https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%A1%8C%E6%94%BF%E5%9C%B0%E5%8D%80.json';
+
+        const url_2 = 'https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%87%AA%E4%BE%86%E6%B0%B4%E7%94%A8%E9%87%8F.json';
+
+        // let map;
+
+        const coordinate = { lat: 24.760759896419373, lng: 120.9527718965576 };
+        let city, water, map, resultData;
+        let infos = [];
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: coordinate,
+                zoom: 15,
+            });
+
+            // new google.maps.Marker({
+            //     position: coordinate,
+            //     map,
+            //     title: "Hello World!",
+            // });
+            MapResource();
+        }
+        function MapResource() {
+            fetch(url_1)
+                .then(response => response.text())
+                .then(cityResult => {
+                    city = JSON.parse(cityResult);
+                    fetch(url_2)
+                        .then(response => response.text())
+                        .then(waterResult => {
+                            water = JSON.parse(waterResult);
+                            MarkAction();
+                        });
+                });
+        };
+
+
+
+        function MarkAction() {
+            //存取第一個陣列城市資料
+            let Array1 = city;
+            //存取第二個陣列水的資料
+            let Array2 = water.TaiwanWaterExchangingData.StatisticofWaterResourcesClass.StatisticofWaterUsageClass.TheConsumptionOfWater;
+
+            //更改陣列
+            let Array3 = Array1.map(m => {
+                                       //用水縣市County 城市縣市City && 用水鄉鎮Town 城市鄉鎮District &&年分Year指定
+                let temp = Array2.filter(f => f.County == m.City && f.Town == m.District && f.Year == '108')
+
+                .map(m => {return `${m.Month}月的自來水用水量為${m.TheDailyDomesticConsumptionOfWaterPerPerson}`
+                                     //人均每日生活用水量TheDailyDomesticConsumptionOfWaterPerPerson
+                });
+                return {
+                    City: m.City,
+                    Town: m.District,
+                    Lat: m.Lat,
+                    Lng: m.Lng,
+                    Water: temp
+                };
+            });
+            // 刪除不正確的資料
+            let resultData = Array3.filter(f => f.Water.length > 0)
+            // console.log(resultData);
+            resultData.forEach((item, index) => {
+                // console.log(item);
+                const marker = new google.maps.Marker({
+                    position: { lat: item.Lat, lng: item.Lng },
+                    map,
+                    title: `${item.City} ${item.Town}`, //靠近標點會顯出地標
+                });
+                //點到會出現在裡面的文字
+                const infowindow = new google.maps.InfoWindow({//資訊視窗 InfoWindow
+                    content: `城市名稱:${item.City},<br>鄉鎮名稱:${item.Town},<br>用水量:<br>${item.Water.join("<br>")}`
+                });
+                // console.warn(infowindow)
+                // 丟到空陣列裡
+                infos.push(infowindow);
+                // console.log(infos)
+                marker.addListener("click", () => {
+                    infos.forEach((item) => {
+                        item.close();
+                        console.warn(item);
+                    });
+                    infowindow.open(map, marker);
+                });
+            });
+        };
+
+//water 78行
+
+
+
+
+
+    </script>
+</body>
+
+</html>

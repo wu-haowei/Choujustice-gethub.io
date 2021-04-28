@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // for (let i = 0; i < 10; i++) {
+
+        //     let x = employees_1[0].lat;
+        //     let y = employees_1[0].lng;
+        //     console.log(x, y);
+
+        // }
+
+
+
+
+        let employees = [1,1];
+        console.log(employees);
+        const url = 'https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%A1%8C%E6%94%BF%E5%9C%B0%E5%8D%80.json';
+        let xhr = new XMLHttpRequest();
+
+        function requestJSON1() {
+            xhr.onload = function () {
+                employees = JSON.parse(this.responseText)
+            }
+        }
+        xhr.open("GET", url);
+        xhr.send();
+
+
+    </script>
+</body>
+
+</html>

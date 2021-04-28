@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>賈以食日 CHIA YI SHI RI</title>
+    <style>
+        div {
+            width: 1200px;
+            margin: auto;
+            /* background-color: aqua; */
+            /* border: 1px solid red; */
+        }
+        .Strip img {/*長條圖片*/
+            width: 100%;
+            margin: 15px 0px;
+
+        }
+        .Bigpicture img {/*單張大圖*/
+            width: 1170px;
+            padding: 15px;/*上相間距15px*/
+            /* border: 1px solid red; */
+            /*邊界線*//*可刪除*/
+        }
+        .Bighead {/*單張大圖*/
+            display: flex;
+            position: relative;
+        }
+        .Tworowshead {/*兩排並排*/
+            display: flex;
+            position: relative;
+
+
+        }
+        .Tworows img {/*兩排圖片*/
+            width: 570px;
+            padding: 15px;/*上相間距15px*/
+            /* border: 1px solid red; */
+            /*邊界線*//*可刪除*/
+
+
+        }
+        .threerowshead {/*三排並排*/
+            display: flex;
+            position: relative;
+
+        }
+        .threerows img {/*三排圖片*/
+            width: 370px;
+            padding: 15px;/*上相間距15px*/
+            /* border: 1px solid red; */
+            /*邊界線*//*可刪除*/
+        }
+        .name {/*品名&價格共用*/
+            font-size: 15px;
+            margin: 15px;/* border: 1px solid red; */
+            /*邊界線*//*可刪除*/
+        }
+
+        .Twobuy{/*兩排購物車*/
+            width: 570px;
+            font-size: 23px;
+            color: #fff;
+            background-color: rgb(63, 62, 62);
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            top: 532px;
+            margin-left: 15px;
+        }
+        .threebuy{/*三排購物車*/
+            width: 370px;
+            font-size: 23px;    
+            color: #fff;
+            background-color: rgb(63, 62, 62);
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            top: 332px;
+            margin-left: 15px;
+        }
+
+        .Bigbuy{/*單圖購物車*/
+            width: 1170px;
+            font-size: 23px;    
+            color: #fff;
+            background-color: rgb(63, 62, 62);
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            top: 1133px;
+            margin-left: 15px;
+        }
+
+        .Tworows:hover .Twobuy{/*兩排購物車透明度*/
+            opacity: 0.8;
+        }
+        .threerows:hover .threebuy{/*三排購物車透明度*/
+            opacity: 0.8;
+        }
+        .Bighead:hover .Bigbuy{/*單排購物車透明度*/
+            opacity: 0.8;
+        }
+
+        /* 影片 */
+        .mvhead{
+            display: flex;
+        }
+        .towmv iframe{
+            width: 100%;
+            height: 300px;
+        }
+        .towmv{
+            margin: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* 底部 */
+
+        .fourrowshead {/*三排並排*/
+            display: flex;
+
+
+        }
+        .fourrows img {/*三排圖片*/
+            width: 270px;
+            padding: 15px;/*上相間距15px*/
+            /* border: 1px solid red; */
+            /*邊界線*//*可刪除*/
+        }
+
+        .tail{
+            font-size: 15px;
+            text-align: center;
+            margin: 15px 15px 300px 15px;
+            
+
+        }
+    </style>
+</head>
+
+
+
+    <!-- 長條圖片 -->
+    <div>
+        <div class="Strip">
+            <img src="/賈以食日 CHIA YI SHI RI_files/01.webp" alt="">
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 兩排 -->
+    <div>
+        <div class="Tworowshead">
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/001.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日-拌雙粉 醋香豆瓣（1袋/3入）<br><s>NT$249</s><br>NT$230</p>
+            </div>
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/002.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日-拌雙粉 醋香豆瓣（16袋/48入）<br><s>NT$3,984</s><br>NT$3,580</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 大圖 -->
+    <div>
+        <div class="Bighead">
+        <div class="Bigpicture">
+            <img src="/賈以食日 CHIA YI SHI RI_files/003.webp" alt="">
+                <p class="Bigbuy">加入購物車</p>
+                <p class="name">賈以食日-角落小夥伴 寶貝麵三入綜合提袋組<br><s>NT$530</s><br>NT$499</p>
+        </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 三排 -->
+    <div>
+        <div class="threerowshead">
+            <div class="threerows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/004.webp" alt="">
+                <p class="threebuy">加入購物車</p>
+                <p class="name">賈以食日-角落小夥伴 寶貝麵（經典原味）<br>NT$159</p>
+            </div>
+            <div class="threerows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/005.webp" alt="">
+                <p class="threebuy">加入購物車</p>
+                <p class="name">賈以食日-角落小夥伴 寶貝麵（綜合蔬菜）<br>NT$159</p>
+            </div>
+            <div class="threerows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/006.webp" alt="">
+                <p class="threebuy">加入購物車</p>
+                <p class="name">賈以食日-角落小夥伴 寶貝麵（南瓜地瓜）<br>NT$159</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 兩排 -->
+    <div>
+        <div class="Tworowshead">
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/007.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日-干貝鍋燒意麵<br><s>NT$150</s><br>NT$138</p>
+            </div>
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/008.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日-干貝鍋燒意麵（1箱/16盒）<br><s>NT$2,400</s><br>NT$2,080</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 兩排 -->
+    <div>
+        <div class="Tworowshead">
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/009.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日-泰式酸辣粉（1盒/3入）<br><s>NT$238</s><br>NT$220</p>
+            </div>
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/010.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日–泰式酸辣粉（1箱/16盒）<br><s>NT$3,808</s><br>NT$3,360</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+        <!-- 長條圖片 -->
+        <div class="Strip">
+            <img src="/賈以食日 CHIA YI SHI RI_files/02.webp" alt="">
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 三排 -->
+    <div>
+        <div class="threerowshead">
+            <div class="threerows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/011.webp" alt="">
+                <p class="threebuy">加入購物車</p>
+                <p class="name">賈以食日-麻花麵（1袋/4入)<br>NT$268</p>
+            </div>
+            <div class="threerows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/012.webp" alt="">
+                <p class="threebuy">加入購物車</p>
+                <p class="name">賈以食日-燒椒麵（1袋/4入）<br>NT$268</p>
+            </div>
+            <div class="threerows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/013.webp" alt="">
+                <p class="threebuy">加入購物車</p>
+
+                <p class="name">賈以食日-麻薑麵（1袋/4入)<br>NT$268</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 兩排 -->
+    <div>
+        <div class="Tworowshead">
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/014.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+
+                <p class="name">賈以食日-麻辣鴨血冬粉<br>NT$159</p>
+            </div>
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/015.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+
+                <p class="name">賈以食日-麻辣鴨血冬粉（1箱/20盒）<br>NT$3,180</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 兩排當一排 -->
+    <div>
+        <div class="Tworowshead">
+            <div class="Tworows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/016.webp" alt="">
+                <p class="Twobuy">加入購物車</p>
+                <p class="name">賈以食日-麻辣鴨血冬粉<br>NT$159</p>
+            </div>
+            <div class="Tworows">
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 大圖 -->
+    <div>
+        <div class="Bighead">
+        <div class="Bigpicture">
+            <img src="/賈以食日 CHIA YI SHI RI_files/017.webp" alt="">
+            <p class="Bigbuy">加入購物車</p>
+            <p class="name">賈以食日-拌雙粉 醋香豆瓣（16袋/48入）<br><s>NT$3,984</s><br>NT$3,580</p>
+        </div>
+    </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <!-- 影片 -->
+    <div>
+        <div class="mvhead">
+            <div class="towmv">
+            <iframe src="https://www.youtube.com/embed/ZPCuv83TAVs " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            <p >賈以食日-角落小夥伴寶貝麵</p>
+            </div>
+            <div class="towmv">
+            <iframe src="https://www.youtube.com/embed/Tso0oDimXtQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            <p >賈以食日-泰式酸辣粉精神領袖Q&A</p>
+            </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <div>
+        <div class="mvhead">
+            <div class="towmv">
+                <iframe src="https://www.youtube.com/embed/MbNDSjRsfRQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <p >賈以食日形象廣告三部曲/麻煩篇</p>
+            </div>
+            <div class="towmv">
+                <iframe src="https://www.youtube.com/embed/9kcbL-J5TSU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <p >賈以食日形象廣告三部曲/作畫篇</p>
+            </div>
+            <div class="towmv top:15px">
+                <iframe src="https://www.youtube.com/embed/-LxiDnc-4Eo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <p >賈以食日形象廣告三部曲/分身篇</p>
+                </div>
+        </div>
+    </div>
+    <!-- *********************************************************************************** -->
+    <div>
+        <div class="fourrowshead">
+            <div class="fourrows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/101.webp" alt="">
+            </div>
+            <div class="fourrows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/102.webp" alt="">
+            </div>
+            <div class="fourrows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/103.webp" alt="">
+            </div>
+            <div class="fourrows">
+                <img src="/賈以食日 CHIA YI SHI RI_files/104.webp" alt="">  
+            </div>
+        </div>
+        <p class="tail">隱私權聲明| 服務條款 | 2018 © 賈以食日 拾躍創意國際有限公司 02-2579-2323</p>
+    </div>
+</body>
+
+</html>

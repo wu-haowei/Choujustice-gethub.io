@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            padding: 100px 0;
+            background: linear-gradient(20deg,#3d5496,#1aa2a0) fixed center center/100% 100%;/*fixed x軸 Y軸 / 背景寬 背景高*/
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+            /* background-color: #ccc; */
+
+        }
+
+        .item .pic {
+            width: 55%;
+            flex-shrink: 0;
+
+        }
+
+        .item .pic img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item .txt {
+            width: 55%;
+            /* background-color: #fa8; */
+            flex-shrink: 0;
+            padding: 50px 30px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        .item > :first-child {
+            margin-right: -10%;
+        }
+        .item:nth-child(1) .txt{
+            background-color: rgba(240,174,193,.8);
+        }
+        .item:nth-child(2) .txt{
+            background-color: rgba(42,253,208,.8);
+        }
+        .item:nth-child(3) .txt{
+            background-color: rgba(254,201,121,.8);
+        }
+        .item:nth-child(4) .txt{
+            background-color: rgba(149,219,214,.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- 1 -->
+        <div class="item">
+            <div class="pic"><img src="https://picsum.photos/600/350/?random1" alt="">
+            </div>
+            <div class="txt">
+                <h2>金魚都懂得切版1</h2>
+                <p>一個之一經驗銀行青年避免最高，協調豪華色彩全市設立強化</p>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="item">
+            <div class="txt">
+                <h2>金魚都懂得切版2</h2>
+                <p>一下和諧保持設施同步規範，世紀字體裝飾提醒石油本月肯定,一下和諧保持設施同步規範，世紀字體裝飾提醒石油本月肯定</p>
+            </div>
+            <div class="pic"><img src="https://picsum.photos/600/350/?random2" alt="">
+            </div>
+
+        </div>
+        <!-- 3 -->
+        <div class="item">
+            <div class="pic"><img src="https://picsum.photos/600/350/?random3" alt="">
+            </div>
+            <div class="txt">
+                <h2>金魚都懂得切版3</h2>
+                <p>啟動功夫條例鈴聲下載女士，家長不得不打印桌面反對留言走出發現味道那就都不，家長不得不打印桌面反對留言走出發現味道那就都不</p>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="item">
+            <div class="txt">
+                <h2>金魚都懂得切版4</h2>
+                <p>運行平台科技外資春天處罰老公變化點評病毒獲得，級別貨幣書記資產來了，無。</p>
+            </div>
+            <div class="pic"><img src="https://picsum.photos/600/350/?random4" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

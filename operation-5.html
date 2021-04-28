@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* body { */
+        /* background-image: url(/002.jpg); */
+        /* width: auto;
+            height: auto; */
+        /* background-attachment: fixed; */
+        /* background-size: cover; */
+        /* background-repeat: no-repeat; */
+        /* background-image: url(/asset/img/tech_tnga/core-bg.png?59c4ad75); */
+        /* } */
+
+        .onetailh6 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .onetailh6 .aaa {
+            width: 74%;
+            height: 1px;
+            background-color: red;
+        }
+
+        .backgrounda {
+            width: 80%;
+            margin: 10px auto;
+            /* background-color: plum; */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 800px;
+            /* border: 1px solid red; */
+        }
+
+        .oneintermediate {
+            width: 40%;
+            top: 0;
+            right: 60%;
+            z-index: 1;
+        }
+
+        .oneintermediate {
+            height: 50%;
+        }
+
+        .onehead {
+            display: flex;
+            width: 30%;
+        }
+
+        .onetitle {
+
+            /* display: flex; */
+            justify-content: center;
+            background-color: #b90e0e;
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            width: auto;
+    height: auto;
+        }
+
+        .onetitletext {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .onetitletext {
+            background-color: #000;
+            color: #fff;
+            font-size: 25px;
+            padding: 10px;
+            line-height: 50px;
+        }
+
+        .onetitletexta {
+            font-size: 40px;
+        }
+
+        .onetail {
+            height: 30%;
+            width: 70%;
+            margin: 0 0 0 30px;
+            font-size: 20px;
+            background-color: #eeeeee;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .backgroundaInsidea {
+            background-color: #eeeeee;
+            height: 300px;
+            width: 40%;
+            margin: 10px 0;
+        }
+
+        .onetailh6 h5 {
+            color: red;
+        }
+
+        .onetailpa h6,
+        .onetailpb h6,
+        .onetailpc h6 {
+            color: #fff;
+            background-color: #000;
+            font-size: 20px;
+            display: inline;
+
+        }
+
+        .onewm iframe {
+            width: 70%;
+            margin: auto;
+            height: 400px;
+        }
+
+        .onewm {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            top: 200px;
+        }
+
+        .one_pic {
+            position: absolute;
+            top: 40%;
+            right: 12%;
+        }
+
+        .one_pic img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .onetitleh1 .number_1 {
+            width: 100px;
+            transform: rotate(90deg);
+            font-weight: lighter;
+            font-family: system-ui;
+            font-size: 97px;
+            height: 100px;
+        }
+
+        .onetitleh1 {
+            display: flex;
+            font-size: 70px;
+            color: #fff;
+            align-items: center;
+            width: 100%;
+        }
+
+        .onetailh6 {
+            font-size: 25px;
+        }
+
+        .one {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /*******2*******/
+        .two_all {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .twohead {
+            width: 40%;
+            height: 50%;
+            z-index: 1;
+            font-size: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .twotail {
+            width: auto;
+    height: auto;
+            z-index: 1;
+            font-size: 20px;
+            background-color: #eeeeee;
+            color: #000;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .twotailh6 h5 {
+            color: red;
+        }
+
+        .twotailh6 {
+            font-size: 25px;
+        }
+
+        .twowm {
+            position: absolute;
+            top: 25%;
+            left: 10px;
+            width: 95%;
+            height: 60%;
+        }
+
+        .twowm iframe {
+            width: 70%;
+            height: 400px;
+            margin: auto;
+        }
+
+        .backgrounda {
+            position: relative;
+        }
+
+        .backgroundaInsideb {
+            width: 50%;
+            height: 50%;
+            background-color: #eeeeee;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+
+        .twotitleh1 {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            font-size: 55px;
+            background-color: #b90e0e;
+            color: #fff;
+            height: 33%;
+            font-size: 60px;
+            /* padding: 0 5px; */
+        }
+
+        .twotailpa h6,
+        .twotailpb h6 {
+            color: #fff;
+            background-color: #000;
+            font-size: 20px;
+            display: inline;
+        }
+
+        .twotitleh1 .number_2 {
+            transform: rotate(90deg);
+            font-size: 100px;
+            height: 110px;
+            font-weight: lighter;
+            font-family: system-ui;
+            line-height: 80px;
+        }
+
+        .twotitletexta {
+            font-size: 40px;
+        }
+
+        .twotitletext {
+            font-size: 25px;
+            line-height: 50px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .two_pic {
+            position: absolute;
+            top: 45%;
+            left: 0;
+            z-index: 1;
+        }
+
+        .two_pic img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .backgrounda {
+            position: relative;
+        }
+
+        .twotailh6 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .twotailh6 .aaa {
+            width: 74%;
+            height: 1px;
+            background-color: red;
+        }
+
+        .backgroundb {
+            width: 80%;
+            height: 260px;
+            margin: auto;
+            /* background-color: aqua; */
+        }
+
+        .five_advantages {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .five_advantagestext {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .five_advantagesline {
+            background-color: black;
+            width: 3%;
+            height: 5px;
+            /* display: flex; */
+            /* flex-direction: column; */
+        }
+
+        .five_advantagesa {
+            display: flex;
+            flex-direction: column;
+            width: 15%;
+            border: 1px solid rgb(163, 159, 159);
+            border-style: dashed
+                /*邊寬變虛線*/
+        }
+
+        .five_advantagesb {
+            position: relative;
+            overflow: hidden;
+            width: 15%;
+
+
+
+        }
+
+        .five_advantagesb_b {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            box-sizing: border-box;
+            /* opacity: 0.5; */
+            font-size: 30px;
+            background-color: red;
+            transition: 0.5s;
+            color: #fff;
+            margin: -2px 0 0px 0px;
+            text-align: center
+                /* display: none; */
+        }
+
+        .five_advantageslabel {
+            display: flex;
+            flex-direction: column;
+            height: 30%;
+            justify-content: space-evenly;
+            align-items: 100%;
+            width: 100%;
+            align-items: center;
+        }
+
+        .five_advantagestext {
+            height: 20%;
+            font-size: 20px;
+            align-items: center;
+            width: 100%;
+            /* position: relative; */
+
+        }
+
+        .five_advantagestext h2 {
+            /* width: 15%; */
+            /* border: 1px solid rgb(180, 170, 170); */
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .five_advantagesa h2:hover {
+            background-color: red;
+            transition: 0.5s;
+            transform: scale(1.3);
+            color: #fff;
+            /* color: #fff; */
+
+        }
+
+        .five_advantagesb:hover .five_advantagesb_b {
+            top: 0;
+            opacity: 1;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="backgroundb">
+
+        <div class="five_advantages">
+            <div class="five_advantageslabel">
+                <h1>五大優勢</h1>
+                <div class="five_advantagesline"></div>
+            </div>
+
+            <div class="five_advantagestext">
+                <div class="five_advantagesa">
+                    <h2>操控樂趣</h2>
+                    <span></span>
+                </div>
+                <!-- <span>操控樂趣</span> -->
+                <div class="five_advantagesb">
+                    <h2>安全守規</h2>
+                    <div class="five_advantagesb_b">安全守規</div>
+                </div>
+                <div class="five_advantagesa">
+                    <h2>乘坐舒適</h2>
+                    <span></span>
+                </div>
+                <!-- <span>乘坐舒適</span> -->
+                <div class="five_advantagesb">
+                    <h2>以人為本</h2>
+                    <div class="five_advantagesb_b">以人為本</div>
+                </div>
+                <div class="five_advantagesa">
+                    <h2>引以為傲</h2>
+                    <span></span>
+                </div>
+                <!-- <span>引以為傲</span> -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="backgrounda">
+
+        <div class="onewm">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WH9kmoDw0fI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <a class="one_pic" href="https://www.youtube.com/watch?v=WH9kmoDw0fI&t=46s"><img src="/youtube_logo.png"
+                    alt="">
+            </a>
+        </div>
+
+
+        <div class="one">
+            <div class="oneintermediate">
+                <div class="onetitle">
+                    <div class="onetitleh1">
+                        <div class="number_1">01</div>
+                        <h3>操控樂趣</h3>
+                    </div>
+                </div>
+                <div class="onetitletext">
+                    <div class="onetitletexta">
+                        <h4>人人滿意的駕駛體驗</h4>
+                    </div>
+
+                    <div class="onetitletextb">
+                        <p>透過最佳重量分配·實現平順起步、直線穩定加速・過彎同時保持車身平穩·帶給駕駛更靈敏的道路反饋・享受隨心馳騁的行駛快戚。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="backgroundaInsidea"></div>
+        </div>
+
+        <div class="onetail">
+            <div class="onetailh6">
+                <h5>因為我們做了這些革新</h5>
+                <div class="aaa"></div>
+            </div>
+            <div class="onetailpa">
+                <h6>低種心設計</h6>
+                <p></p> 透過低重心設計・不僅呈現更低伏的外觀・更能減少車身側傾・保持高速行駛穩定性。
+            </div>
+            <div class="onetailpb">
+                <h6>車體剛性強化</h6>
+                <p></p>車身結構採用超高強度鋼材・提高車輛穩定性·同時藉由雷射強化焊接技術・大幅增加焊點數量,提升車身抗扭剛性·強仳駕馭穩定性及安全性
+            </div>
+            <div class="onetailpc">
+                <h6>四輪獨立懸吊</h6>
+                <p></p> 搭載全新四輪獨立懸吊設定·透過懸吊的高承載強度・保持輪胎抓地力・同時兼頗轉向靈敏度與清晰路回·提升馭樂趣
+            </div>
+        </div>
+    </div>
+
+    <!-- ******2****** -->
+
+    <div class="backgrounda">
+        <a href="https://www.youtube.com/watch?v=A9-cReYqtnM&t=46s">
+            <div class="two_pic"><img src="/youtube_logo.png" alt=""> </div>
+        </a>
+        <div class="backgroundaInsideb"></div>
+        <div class="twowm">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/A9-cReYqtnM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="two_all">
+            <div class="twohead">
+                <div class="twotitleh1">
+                    <div class="number_2">02</div>
+                    <h3>安全守護</h3>
+                </div>
+
+                <div class="twotitletext">
+                    <div class="twotitletexta">
+                        <h4>行車更安心的高剛性車體</h4>
+                    </div>
+
+                    <div class="twotitletextb">
+                        <p>您的愛車會妥善保護您,強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如亨受旅程亳無後顧之憂</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="twotail">
+                <div class="twotailh6">
+                    <h5>因為我們做了這些革新</h5>
+                    <div class="aaa"></div>
+
+                </div>
+                <div class="twotailpa">
+                    <h6> 主動安全</h6>
+                    <p>以先進的TSS糸統,主動偵測路況·輛助罵駛判斷路況並維持行車安全</p>
+                </div>
+                <div class="twotailpb">
+                    <h6>被動安全</h6>
+                    <p>堅固的高剛性車體·使用熱沖歴材料的高強度抗扭板・強化座對意外事故的保護力</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ******3****** -->
+
+    <div class="backgrounda">
+
+        <div class="onewm">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SMNtG6-gS2M"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=SMNtG6-gS2M&t=46s">
+                <div class="one_pic"><img src="/youtube_logo.png" alt=""> </div>
+            </a>
+        </div>
+
+
+        <div class="one">
+            <div class="oneintermediate">
+                <div class="onetitle">
+                    <div class="onetitleh1">
+                        <div class="number_1">03</div>
+                        <h3>乘坐舒適</h3>
+                    </div>
+                </div>
+                <div class="onetitletext">
+                    <div class="onetitletexta">
+                        <h4>令人放鬆舒適的車室空間</h4>
+                    </div>
+
+                    <div class="onetitletextb">
+                        <p>車室空間設計著重人體工學,透過方向盤踏板等位置優化・追求更舒適的駕駛位置,並以新型座椅設計·提高座椅包覆性・致力貫現長途駕駛不疲勞的適罵馭體驗</p>
+                    </div>
+                </div>
+            </div>
+            <div class="backgroundaInsidea"></div>
+        </div>
+
+        <div class="onetail">
+            <div class="onetailh6">
+                <h5>因為我們做了這些革新</h5>
+                <div class="aaa"></div>
+            </div>
+            <div class="onetailpa">
+                <h6> 駕駛位置最佳化</h6>
+                <p></p> 針對罵駛位置進行徹底的修改·讓罵馭者可如同握手般自然且舒地操控方向盤
+            </div>
+            <div class="onetailpb">
+                <h6>駕馭視野佳</h6>
+                <p>考量罵驶坐進車内的高度·透過前擋風玻璃位置的調整,達到盲區極小化,使駕駛視野更開闊,同步提升駕馭安全</p>
+            </div>
+            <div class="onetailpc">
+                <h6>更寧靜的車室</h6>
+                <p> 採用最新三層結構的隔音材料,與引擎變速箱的零件改革,將座艙的震動抑制在最小限度,提供乘客舒適安靜的感受</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ******4****** -->
+
+    <div class="backgrounda">
+        <a href="https://www.youtube.com/watch?v=MniLwJEoNgg&t=46s">
+            <div class="two_pic"><img src="/youtube_logo.png" alt=""> </div>
+        </a>
+        <div class="backgroundaInsideb"></div>
+        <div class="twowm">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MniLwJEoNgg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            \
+        </div>
+
+        <div class="two_all">
+            <div class="twohead">
+                <div class="twotitleh1">
+                    <div class="number_2">04</div>
+                    <h3>以人為本</h3>
+                </div>
+
+                <div class="twotitletext">
+                    <div class="twotitletexta">
+                        <h4>使用者導向的貼心設計</h4>
+                    </div>
+
+                    <div class="twotitletextb">
+                        <p>藉由高度人性化的介面整合傳遞車輛資訊豐富日常駕駛體驗。從提升油耗表現到行李廂空間最適化,均細心考量,更加貼近使用者真正所需與習慣,並給予即時回應。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="twotail">
+                <div class="twotailh6">
+                    <h5>因為我們做了這些革新</h5>
+                    <div class="aaa"></div>
+
+                </div>
+                <div class="twotailpa">
+                    <h6> 優異油耗表現</h6>
+                    <p>以 AURIS為例,更強勁的高效引擎將熱效率提升至40%,達到世界級水準,屢屢突破燃油效率新境界</p>
+                </div>
+                <div class="twotailpb">
+                    <h6>行李箱空間最適化</h6>
+                    <p>以 PRIUS為例,透過將電池位置移到後座下方,譲行李廂擁有更大的空間。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ******5****** -->
+
+    <div class="backgrounda">
+
+        <div class="onewm">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eqFHWdDMXc0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=eqFHWdDMXc0&t=46s">
+                <div class="one_pic"><img src="/youtube_logo.png" alt=""> </div>
+            </a>
+        </div>
+
+        <div class="one">
+            <div class="oneintermediate">
+                <div class="onetitle">
+                    <div class="onetitleh1">
+                        <div class="number_1">05</div>
+                        <h3>引以為傲</h3>
+                    </div>
+                </div>
+                <div class="onetitletext">
+                    <div class="onetitletexta">
+                        <h4>極具吸引力的精心設計</h4>
+                    </div>
+
+                    <div class="onetitletextb">
+                        <p>TNGA車款擁有讓人忍不住回頭的新潮外觀讓駕駛充滿自信的駕馭快!不僅讓車主能展現個人風格・也能讓擁有者都能引以為傲</p>
+                    </div>
+                </div>
+            </div>
+            <div class="backgroundaInsidea"></div>
+        </div>
+
+        <div class="onetail">
+            <div class="onetailh6">
+                <h5>因為我們做了這些革新</h5>
+                <div class="aaa"></div>
+            </div>
+            <div class="onetailpa">
+                <h6> 設計概念</h6>
+                <p>TNGA低重心設計・不僅呈現更低伏的運動化外觀</p>
+                更講究高品質內装的一致性。
+            </div>
+            <div class="onetailpb">
+                <h6>環保概念</h6>
+                <p>為了對環境保護盡一份心力,我們全面提升傳統引、變速箱與油電複合動力的動力效能。</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

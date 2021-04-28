@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直立側邊選單</title>
+    <script src="https://use.fontawesome.com/fa7210dc77.js"></script>
+    <!-- 引用 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #546377;
+        }
+
+        .side-meum {
+            width: 300px;
+            height: 100%;
+            background-image: linear-gradient(0deg, #3381b0, #c2196c);
+            /*漸層*/
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 0px 10px hsla(240, 40%, 15%, 0.6);
+            /*陰影*/
+            padding: 50px 0;
+            box-sizing: border-box;
+            position: relative;
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+
+        .side-meum form {
+            display: flex;
+            margin: 0 10px 50px;
+            border-radius: 100px;
+            border: 1px solid rgb(255, 255, 255, .4);
+        }
+
+        .side-meum form input,
+        .side-meum form button {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        .side-meum form input {
+            width: 230px;
+            text-align: center;
+        }
+
+        ::placeholder {
+            color: #fff;
+        }
+
+        .side-meum form button {
+            width: 50px;
+        }
+
+        .side-meum form input:focus,
+        .side-meum form button:focus {
+            outline: none;
+        }
+
+        .side-meum label {
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            background-color: #000;
+            color: #fff;
+            right: -40px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 0 10px 10px 0;
+            opacity: 0.2;
+        }
+
+        .side-meum:hover label{
+            opacity: 1;
+        }
+
+        #side-meun-switch {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        #side-meun-switch:checked+.side-meum {
+            transform: translateX(0);
+        }
+
+        #side-meun-switch:checked+.side-meum label .fa{
+        transform: scalex(-1);
+        }
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+
+        }
+
+        nav a+a::before {
+            content: '';
+            position: absolute;
+            border: 1px solid rgb(255, 255, 255, .4);
+            left: 10px;
+            right: 10px;
+            top: 0;
+        }
+
+        nav a .fa {
+            margin-right: -1.1em;
+            transform: scale(0);
+            transition: .3s;
+        }
+
+        nav a:hover .fa {
+            margin-right: 0em;
+            transform: scale(1);
+        }
+    </style>
+
+</head>
+
+<input type="checkbox" name="" id="side-meun-switch">
+
+<body>
+    <div class="side-meum">
+        <form action="">
+            <input type="datetime" placeholder="請輸入關鍵字">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+        <nav>
+            <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i> 鐵人賽</a>
+            <a href="#"><i class="fa fa-gavel" aria-hidden="true"></i> 暴力班</a>
+            <a href="#"><i class="fa fa-heartbeat" aria-hidden="true"></i> RWD 醬子</a>
+            <a href="#"><i class="fa fa-hourglass-half" aria-hidden="true"></i> 金魚網頁</a>
+            <a href="#"><i class="fa fa-tree" aria-hidden="true"></i> 金魚切版</a>
+        </nav>
+        <label for="side-meun-switch">
+            <i class="fa fa-angle-right"></i>
+        </label>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background-color: #003;
+        }
+
+        .wrap {
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+
+        .item {
+            width: 368px;
+            margin: 15px;
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid#ccc;
+            transform: translateY(0px);
+            transition: .5s;
+            height: auto;
+        }
+
+        .item img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item h2 {
+            border-bottom: 1px solid#888;
+            padding-block: .3em;
+            margin-bottom: .4em;
+            font-weight: 900;
+            transition: .2s;
+
+        }
+
+        .item p {
+            line-height: 1.6;
+            font-weight: 300;
+            transition: .2s;
+
+
+        }
+
+        .item .txt {
+            padding: 20px;
+            position: relative;
+        }
+
+        .item .txt:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 184px solid#fff;
+            border-right: 184px solid#fff;
+            transform: translateY(-100%);
+        }
+
+        .item:hover {
+            transform: translateY(-50px);
+        }
+
+        .item:hover .txt {
+            background-image: linear-gradient(0deg, #fe8076, #feb85d);
+        }
+
+        .item:hover .txt:before {
+            border-left: 184px solid#feb85d;
+            border-right: 184px solid#feb85d;
+        }
+
+        .item:hover h2 {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .item:hover p {
+            color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="item"> <img src="https://picsum.photos/500/400/?random1">
+            <div class="txt">
+                <h2>CSS可樂</h2>
+                <p>你想獲得演唱，輔助用品規定不在道理將來狀況商城有了業務，禮物瀏覽器地說還不認識實踐將其各地</p>
+            </div>
+        </div>
+        <div class="item"> <img src="https://picsum.photos/500/400/?random2">
+            <div class="txt">
+                <h2>你Amos</h2>
+                <p>你想獲得演唱，輔助用品規定不在道理將來狀況商城有了業務，禮物瀏覽器地說還不認識實踐將其各地</p>
+            </div>
+        </div>
+        <div class="item"> <img src="https://picsum.photos/500/400/?random3">
+            <div class="txt">
+                <h2>推坑大魔王</h2>
+                <p>你想獲得演唱，輔助用品規定不在道理將來狀況商城有了業務，禮物瀏覽器地說還不認識實踐將其各地</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

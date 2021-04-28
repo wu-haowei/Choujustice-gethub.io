@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apple(Big_Love)</title>
+    <link rel=”icon” href="apple.png" type=”image/x-icon”>
+
+    <link rel="shortcut icon" href="apple.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            word-break: break-all
+        }
+
+        \ton {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .container .col {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .img_w {
+
+            border: 1px solid #d6d6d6;
+            border-radius: 10px;
+            min-height: 6.23529rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 1.1;
+            color: #111;
+        }
+
+        .new-all {
+            font-size: 17px;
+            color: #ef5602;
+            line-height: 1.47059;
+        }
+
+        ._line {
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        #iphone,
+        #ipad,
+        #mac {
+            display: none;
+        }
+
+        .price {
+            color: #000;
+            background-color: pink;
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        #button_Lord {
+            background-color: #333333;
+            width: 100%;
+        }
+
+        #button_A,
+        #button_B,
+        #button_C {
+            color: #f5f5f7;
+            min-height: 5.23529rem;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-align-initial {
+            text-align: initial;
+        }
+
+        .px-6 {
+            padding: 0 50px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <!-- 左邊 -->
+
+
+        <div id="button_Lord" class="button mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 p-0">
+                        <button id="button_A" type="submit" class="btn px-6">iPhone</button>
+                    </div>
+                    <div class="col-12 col-md-4 p-0">
+                        <button id="button_B" type="submit" class="btn px-6">iPad</button>
+                    </div>
+                    <div class="col-12 col-md-4 p-0">
+                        <button id="button_C" type="submit" class="btn px-6">Mac</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右邊 -->
+        <div id="iphone">
+            <h1 id="iphone_$" class="price">價錢</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6" id="pic_iphone">
+                        <img id="iPhone_pic_img"
+                            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000"
+                            class="w-100">
+                    </div>
+                    <div class="col-12 col-md-6" id="text">
+                        <div class="d-flex flex-column">
+                            <h1 aria-label="" class="fwl">
+                                <strong>購買 iPhone 12 Pro</strong>
+                            </h1>
+                            <span><b>選擇機型。</b></span>
+                            <a href="#">哪一款機型最適合你？</a>
+                        </div>
+                        <div id="iphone_mode">
+                        </div>
+                        <div class="_line w-100 my-5"></div>
+                        <span><b>選擇外觀。</b></span>
+                        <div id="iphone_color">
+                        </div>
+                        <div class="_line w-100 my-5"></div>
+                        <div class="d-flex flex-column">
+                            <span><b>選擇儲存容量。</b></span>
+                        </div>
+                        <div id="iphone_SSD">
+                        </div>
+                        <a href="#">你需要多少儲存空間？</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- **************************************ipad************************************** -->
+        <div id="ipad">
+            <h1 id="ipad_$" class="price">價錢</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6" id="pic_ipad">
+                        <img id="pic_A_img"
+                            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000"
+                            class="w-100">
+                    </div>
+                    <div class="col-12 col-md-6" id="text">
+                        <div class="d-flex flex-column">
+                            <h1 aria-label="" class="fwl">
+                                <strong>購買 iPad Pro</strong>
+                            </h1>
+                            <p>購買 iPad 可享免額外付費運送服務。</p>
+                            <span><b>機型</b></span>
+                        </div>
+                        <div id="ipad_mode">
+                        </div>
+                        <div class="_line w-100 my-5"></div>
+                        <span><b>選擇外觀。</b></span>
+                        <div id="ipad_color">
+                        </div>
+                        <div class="_line w-100 my-5"></div>
+                        <div class="d-flex flex-column">
+                            <span><b>選擇儲存容量。</b></span>
+                        </div>
+                        <div id="ipad_SSD">
+                        </div>
+                        <a href="#">你需要多少儲存空間？</a>
+                        <div class="_line w-100 my-5"></div>
+                        <span><b>連線能力</b></span>
+                        <div id="ipad_Connect">
+                        </div>
+                        <a href="#">你需要 Wi-Fi 或 Wi-Fi + 行動網路機型？</a>
+                        <span><b>讓你的裝置更具個人風格。</b></span>
+                        <div id="ipad_Other">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- **************************************mac************************************** -->
+        <div id="mac">
+            <h1 id="mac_$" class="price">價錢</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-5" id="pic_mac">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-config-201810?wid=539&hei=312&fmt=jpeg&qlt=95&.v=1603332211000"
+                            class="w-100">
+                    </div>
+                    <div class="col-12 col-md-6" id="text">
+                        <div class="d-flex flex-column">
+                            <h1 aria-label="iPhone 12 Pro" class="fwl">
+                                <div class="new-all">全新</div>
+                                <strong>自訂你的 MacBook Air - 太空灰色</strong>
+                            </h1>
+                            <div class="d-flex flex-column my-2">
+                                <span>Apple M1 晶片配備 8 核心 CPU、8 核心 GPU 與 16 核心神經網路引擎</span>
+                                <span>8GB 統一記憶體</span>
+                                <span>512GB SSD 儲存裝置</span>
+                                <span>備原彩顯示技術的 Retina 顯示器具</span>
+                                <span>背光巧控鍵盤 - 中文 (注音)</span>
+                                <span>Touch ID</span>
+                                <span>力度觸控板</span>
+                                <span>兩個 Thunderbolt / USB 4 埠</span>
+                            </div>
+                            <a href="#">進一步了解 Apple M1 晶片 ></a>
+                            <div class="_line w-100 my-5"></div>
+                        </div>
+                        <div id="mac_mode">
+                        </div>
+                        <span><b>儲存裝置</b></span><br>
+                        <a href="#">你需要多少儲存空間？</a>
+                        <div id="mac_SSD">
+                        </div>
+                        <span><b>鍵盤語言</b></span><br>
+                        <a href="#">進一步了解(鍵盤語言)</a>
+                        <select id='keyboard'></select>
+                        <span><b>預先安裝的軟體</b></span><br>
+                        <span><b>Final Cut Pro</b></span>
+                        <a href="#">進一步了解</a>
+                        <div id="mac_inal_Cut_Pro">
+                        </div>
+                        <span><b>Logic Pro</b></span><br>
+                        <a href="#">進一步了解</a>
+                        <div id="mac_Logic_Pro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // **********************************************************************************************************************
+        let iphone_color_Picture = [
+            { color: '石墨色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-graphite-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000' },
+            { color: '銀色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-silver-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000' },
+            { color: '金色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-gold-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000' },
+            { color: '太平洋藍色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-blue-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054547000' }
+        ];
+        let iPhone =
+            [
+                //---------------------6.1 吋顯示器------------------------------------------------------------------
+                { mode: 'iPhone 12 Pro', color: '石墨色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '33,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000' },
+                { mode: 'iPhone 12 Pro', color: '石墨色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '37,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000' },
+                { mode: 'iPhone 12 Pro', color: '石墨色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '44,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000' },
+                { mode: 'iPhone 12 Pro', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '33,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000' },
+                { mode: 'iPhone 12 Pro', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '37,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000' },
+                { mode: 'iPhone 12 Pro', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '44,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000' },
+                { mode: 'iPhone 12 Pro', color: '金色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '33,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021659000' },
+                { mode: 'iPhone 12 Pro', color: '金色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '37,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021659000' },
+                { mode: 'iPhone 12 Pro', color: '金色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '44,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021659000' },
+                { mode: 'iPhone 12 Pro', color: '太平洋藍色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '33,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000' },
+                { mode: 'iPhone 12 Pro', color: '太平洋藍色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '37,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000' },
+                { mode: 'iPhone 12 Pro', color: '太平洋藍色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '44,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000' },
+
+                //---------------------6.7 吋顯示器------------------------------------------------------------------
+
+                { mode: 'iPhone 12 Pro Max', color: '石墨色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '石墨色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '41,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '石墨色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '48,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '41,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '48,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '金色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000' },
+                { mode: 'iPhone 12 Pro Max', color: '金色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '41,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000' },
+                { mode: 'iPhone 12 Pro Max', color: '金色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '48,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000' },
+                { mode: 'iPhone 12 Pro Max', color: '太平洋藍色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '太平洋藍色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: '41,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+                { mode: 'iPhone 12 Pro Max', color: '太平洋藍色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: '48,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000' },
+            ]
+        // **********************************************************************************************************************
+        let iphone_mode = document.querySelector("#iphone_mode");
+        iphone_mode.classList.add("w-100")
+        let set_iphone_mode = new Set();
+        let result_iPhone_mode = iPhone.filter(item => !set_iphone_mode.has(item.mode) ? set_iphone_mode.add(item.mode) : false);
+        let iPhone_mode_Asn = [];
+
+        for (let i = 0; i < result_iPhone_mode.length; i++) {
+            let out = document.createElement("div");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_iPhone_mode_${i + 1}`, "iPhone_mode_btn", "btn");
+            out.addEventListener('click', function (e) {
+                iPhone_mode_Asn = iPhone.filter(x => x.mode == result_iPhone_mode[i].mode)
+                let iPhone_pic_img = document.getElementById('iPhone_pic_img');
+                iPhone_pic_img.src = result_iPhone_mode[i].color_imgsrc;
+                iphone_$.innerHTML = result_iPhone_mode[i].$;
+                console.log(iPhone_mode_Asn)
+
+                var iPhone_mode_btn = document.querySelectorAll('.iPhone_mode_btn');
+                // iPhone_mode_btn.forEach((item, index) => {
+                // item.addEventListener('click', function (e) {
+                iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                console.log(e)
+                // })
+                // })
+            })
+            let inside = document.createElement("span");
+            inside.classList.add("d-flex", "flex-column", "font-monospace")
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_iPhone_mode[i].mode;
+            inside.appendChild(inside_span);
+            let span = document.createElement("span");
+            span.innerText = result_iPhone_mode[i].$;
+            span.classList.add("d-flex", "align-items-center", "font-monospace");
+            out.appendChild(inside);
+            out.appendChild(span);
+            iphone_mode.appendChild(out);
+        }
+        //------------------------------iPhone顏色----------
+
+        let iphone_color = document.getElementById('iphone_color');
+        iphone_color.classList.add("d-flex", "btn", "flex-wrap")
+        let iPhone_color_Asn = [];
+        for (let i = 0; i < iphone_color_Picture.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A = document.createElement('div');
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `ipad_color_${i + 1}`, "iphone_color_btn");
+            out_A.addEventListener('click', function (e) {
+                iPhone_color_Asn = iPhone_mode_Asn.filter(x => x.color == iphone_color_Picture[i].color)
+                let iPhone_pic_img = document.getElementById('iPhone_pic_img');
+                iPhone_pic_img.src = iPhone_color_Asn[0].color_imgsrc;
+                console.log(iPhone_color_Asn)
+
+                var iphone_color_btn = document.querySelectorAll('.iphone_color_btn');
+                iphone_color_btn.forEach((item, index) => {
+                    // item.addEventListener('click', function (e) {
+                    iphone_color_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
+                })
+            })
+            let inside_img = document.createElement("img");
+            inside_img.setAttribute('src', iphone_color_Picture[i].color_imgsrc);
+            inside_img.classList.add("w-25");
+            out_A.appendChild(inside_img);
+            let inside_span = document.createElement("span");
+            inside_span.innerText = iphone_color_Picture[i].color;
+            out_A.appendChild(inside_span);
+            out_B.appendChild(out_A);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            iphone_color.appendChild(out);
+        }
+        //-----------------------------iPhone-SSD----------
+        let iphone_SSD = document.getElementById('iphone_SSD');
+        iphone_SSD.classList.add("d-flex", "flex-wrap", "btn")
+        let iPhone_SSD_Asn = [];
+        let set_iphone_SSD = new Set();
+        let result_iPhone_SSD = iPhone.filter(item => !set_iphone_SSD.has(item.SSD) ? set_iphone_SSD.add(item.SSD) : false);
+
+        for (let i = 0; i < result_iPhone_SSD.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0", "font-monospace")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A1 = document.createElement('div');
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_iPhone_SSD_${i + 1}`, "iphone_SSD_btn")
+
+            out_A1.addEventListener('click', function (e) {
+                iPhone_SSD_Asn = iPhone_color_Asn.filter(x => x.SSD == result_iPhone_SSD[i].SSD)
+                iphone_$.innerHTML = "NT$" + (iPhone_SSD_Asn[0].$).substring(0, (iPhone_SSD_Asn[0].$).length - 1)
+                console.log(iPhone_SSD_Asn)
+                var iphone_SSD_btn = document.querySelectorAll('.iphone_SSD_btn');
+                iphone_SSD_btn.forEach((item, index) => {
+                    // item.addEventListener('click', function (e) {
+                    iphone_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
+                })
+            })
+            let inside_A1 = document.createElement('span');
+            let inside_span_1_1 = document.createElement('span');
+            inside_span_1_1.innerText = result_iPhone_SSD[i].SSD;
+            inside_A1.appendChild(inside_span_1_1);
+            let inside_span_1_2 = document.createElement('span');
+            inside_span_1_2.innerText = result_iPhone_SSD[i].SSD_GB;
+            inside_A1.appendChild(inside_span_1_2);
+            let inside_sup_1 = document.createElement('sup');
+            inside_sup_1.innerText = result_iPhone_SSD[i].SSD_1;
+            inside_span_1_2.appendChild(inside_sup_1);
+            let inside_span_1_3 = document.createElement("span");
+            inside_span_1_3.innerText = result_iPhone_SSD[i].$;
+            out_A1.appendChild(inside_span_1_3);
+            out_A1.appendChild(inside_A1);
+            out_A1.appendChild(inside_A1);
+            out_B.appendChild(out_A1);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            iphone_SSD.appendChild(out);
+        }
+        // **********************************************************************************************************************
+        let ipad_color_Picture = [
+            { color: '太空灰色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-space-gray-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' },
+            { color: '銀色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' }
+        ];
+        let ipad_Other_Picture = [
+            { Plus: '加上鐫刻', Key: '鐫刻你的名字、縮寫、電話號碼或日期。Apple 獨家提供。', $: '免費' },
+            { Plus: '不加鐫刻', Key: '', $: '' },
+        ];
+        let ipad =
+            [
+                //---------------------11 吋顯示器-太空灰色-WiFi------------------------------------------------------------------
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '25,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '28,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '34,200起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '46,600起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '59,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+                //---------------------11 吋顯示器-太空灰色-行動網路------------------------------------------------------------------
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '30,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '33,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '39,200起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '51,600起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '64,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
+                //---------------------11 吋顯示器-銀色-WiFi------------------------------------------------------------------
+                { mode: '11 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '25,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+
+                { mode: '11 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '28,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+
+                { mode: '11 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '34,200起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+
+                { mode: '11 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '46,600起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '59,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+                // //---------------------11 吋顯示器-銀色-行動網路------------------------------------------------------------------
+                { mode: '11 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '30,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+
+                { mode: '11 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '33,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+
+                { mode: '11 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '39,200起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+
+                { mode: '11 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '51,600起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '64,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
+                //---------------------12.9 吋顯示器-太空灰色-WiFi------------------------------------------------------------------
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '32,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '50,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '69,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+                // ---------------------12.9 吋顯示器-太空灰色-行動網路------------------------------------------------------------------
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '41,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '48,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '55,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '74,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+                //---------------------12.9 吋顯示器-銀色-WiFi------------------------------------------------------------------
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '32,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '50,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '69,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+                // ---------------------12.9 吋顯示器-銀色-行動網路------------------------------------------------------------------
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '41,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '48,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '55,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 2, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '74,000起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
+            ];
+        //-----------------------------ipad-尺寸----------
+        let ipad_mode = document.querySelector("#ipad_mode");
+        ipad_mode.classList.add("btn", "w-100")
+        let set = new Set();
+        let result_mode = ipad.filter(item => !set.has(item.mode) ? set.add(item.mode) : false);
+        let mode_Asn = [];
+
+        for (let i = 0; i < result_mode.length; i++) {
+            let out = document.createElement("div");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `ipad_mode_${i + 1}`, "ipad_mode_btn", "font-monospace");
+            out.addEventListener('click', function (e) {
+                mode_Asn = ipad.filter(x => x.mode == result_mode[i].mode)
+                let pic_A_img = document.getElementById('pic_A_img');
+                pic_A_img.src = result_mode[i].color_imgsrc;
+                ipad_$.innerHTML = result_mode[i].$;
+                console.log(mode_Asn)
+
+                var ipad_mode_btn = document.querySelectorAll('.ipad_mode_btn');
+                ipad_mode_btn.forEach(x => x.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                // console.warn(e)
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+            let inside = document.createElement("span");
+            inside.classList.add("d-flex", "flex-column", "test")
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_mode[i].mode;
+            inside.appendChild(inside_span);
+            let span = document.createElement("span");
+            span.innerText = result_mode[i].$;
+            span.classList.add("d-flex", "align-items-center");
+            out.appendChild(inside);
+            out.appendChild(span);
+            ipad_mode.appendChild(out);
+        }
+        //------------------------------ipad顏色----------
+        let ipad_color = document.getElementById('ipad_color');
+        ipad_color.classList.add("d-flex", "btn")
+        let color_Asn = [];
+        for (let i = 0; i < ipad_color_Picture.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-100", "m-0")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A = document.createElement('div');
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `ipad_color_${i + 1}`, "ipad_color_btn");
+            out_A.addEventListener('click', function (e) {
+                color_Asn = mode_Asn.filter(x => x.color == ipad_color_Picture[i].color)
+                let pic_A_img = document.getElementById('pic_A_img');
+                pic_A_img.src = color_Asn[0].color_imgsrc;
+                console.log(color_Asn)
+
+                var ipad_color_btn = document.querySelectorAll('.ipad_color_btn');
+                ipad_color_btn.forEach((item, index) => {
+                    ipad_color_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                })
+            })
+            let inside_img = document.createElement("img");
+            inside_img.setAttribute('src', ipad_color_Picture[i].color_imgsrc);
+            inside_img.classList.add("w-20");
+            out_A.appendChild(inside_img);
+            let inside_span = document.createElement("span");
+            inside_span.innerText = ipad_color_Picture[i].color;
+            out_A.appendChild(inside_span);
+            out_B.appendChild(out_A);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            ipad_color.appendChild(out);
+        }
+        //-----------------------------ipad-容量----------
+        let ipad_SSD = document.getElementById('ipad_SSD');
+        ipad_SSD.classList.add("d-flex", "flex-wrap", "btn")
+        let SSD_Asn = [];
+        let set_SSD = new Set();
+        let result_SSD = ipad.filter(item => !set.has(item.SSD) ? set.add(item.SSD) : false);
+
+        for (let i = 0; i < result_SSD.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0", "font-monospace")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A1 = document.createElement('div');
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`, "ipad_SSD_btn")
+            out_A1.addEventListener('click', function (e) {
+                SSD_Asn = color_Asn.filter(x => x.SSD == result_SSD[i].SSD)
+                ipad_$.innerHTML = SSD_Asn[0].$
+                console.log(SSD_Asn)
+
+                var ipad_SSD_btn = document.querySelectorAll('.ipad_SSD_btn');
+                ipad_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+            let inside_A1 = document.createElement('span');
+            let inside_span_1_1 = document.createElement('span');
+            inside_span_1_1.innerText = result_SSD[i].SSD;
+            inside_A1.appendChild(inside_span_1_1);
+            let inside_span_1_2 = document.createElement('span');
+            inside_span_1_2.innerText = result_SSD[i].SSD_GB;
+            inside_A1.appendChild(inside_span_1_2);
+            let inside_sup_1 = document.createElement('sup');
+            inside_sup_1.innerText = result_SSD[i].SSD_1;
+            inside_span_1_2.appendChild(inside_sup_1);
+            let inside_span_1_3 = document.createElement("span");
+            inside_span_1_3.innerText = result_SSD[i].$;
+            out_A1.appendChild(inside_span_1_3);
+            out_A1.appendChild(inside_A1);
+            out_A1.appendChild(inside_A1);
+            out_B.appendChild(out_A1);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            ipad_SSD.appendChild(out);
+        }
+        //-----------------------------ipad-款式----------
+        let ipad_Connect = document.getElementById('ipad_Connect');
+        ipad_Connect.classList.add("d-flex", "btn")
+        let Connect_Asn = [];
+        let set_Connect = new Set();
+        let result_Connect = ipad.filter(item => !set.has(item.Connect) ? set.add(item.Connect) : false);
+        for (let i = 0; i < result_Connect.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-100", "m-0", "font-monospace")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A = document.createElement('div');
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `result_Connect_${i + 1}`, "ipad_Connect_btn")
+
+            out_A.addEventListener('click', function (e) {
+                Connect_Asn = SSD_Asn.filter(x => x.Connect == result_Connect[i].Connect)
+                Connect_Asn_$ = "NT$" + (Connect_Asn[0].$).substring(0, (Connect_Asn[0].$).length - 1); //删除最后末字符
+                ipad_$.innerHTML = Connect_Asn_$
+                console.log(Connect_Asn)
+
+                var ipad_Connect_btn = document.querySelectorAll('.ipad_Connect_btn');
+                ipad_Connect_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_Connect[i].Connect;
+            out_A.appendChild(inside_span);
+            let inside_span1 = document.createElement("span");
+            inside_span1.innerText = result_Connect[i].$;
+            out_A.appendChild(inside_span);
+            out_A.appendChild(inside_span1);
+            out_B.appendChild(out_A);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            ipad_Connect.appendChild(out);
+        }
+        //------------------------------其他----------
+
+        let set_Other = new Set();
+        let result_Other = ipad_Other_Picture.filter(item => !set.has(item.Plus) ? set.add(item.Plus) : false);
+        let ipad_Other = document.getElementById('ipad_Other');
+        for (let i = 0; i < ipad_Other_Picture.length; i++) {
+            ipad_Other.classList.add("btn-group", "d-block", "btn")
+            let out = document.createElement('div');
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", "flex-row-reverse", `ipad_Other_${i + 1}`, "ipad_Other_btn", "text-align-initial")
+            let inside = document.createElement('span');
+            inside.classList.add("d-flex", "flex-column", "align-items-baseline")
+            let inside_span_A = document.createElement("span");
+            inside_span_A.innerText = ipad_Other_Picture[i].Plus;
+            inside.appendChild(inside_span_A);
+            let inside_span_B = document.createElement("span");
+            inside_span_B.innerText = ipad_Other_Picture[i].Key;
+            inside.appendChild(inside_span_B);
+            let inside_span_C = document.createElement("span");
+            inside_span_C.innerText = ipad_Other_Picture[i].$;
+            out.appendChild(inside_span_C);
+            out.appendChild(inside);
+            ipad_Other.appendChild(out);
+        }
+
+        result_Other.forEach((item, index) => {
+            let result_Other_index = document.querySelector(`.ipad_Other_${[index + 1]}`)
+            result_Other_index.addEventListener('click', function (e) {
+                ipad_$.innerHTML = Connect_Asn_$ + " " + result_Other[index].Plus;
+                console.log(result_Other)
+
+                var ipad_Other_btn = document.querySelectorAll('.ipad_Other_btn');
+                ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+        })
+        //**********************************************************************************
+        let mac_keyboard = [
+            { format: '背光巧控鍵盤 - 美式英文' },
+            { format: '背光巧控鍵盤 - 日文' },
+            { format: '背光巧控鍵盤 - 中文 (拼音)' },
+            { format: '背光巧控鍵盤 - 韓文' },
+        ]
+        let mac =
+            [
+                //---------------------8GB 統一記憶體------------------------------------------------------------------
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '38,900起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '44,900起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '56,900起' },
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '48,890起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '54,890起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '66,890起' },
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '45,490起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '51,490起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '63,490起' },
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '55,480起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '61,480起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '73,480起' },
+                //---------------------16GB 統一記憶體------------------------------------------------------------------
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '44,900起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '50,900起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '62,900起' },
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '54,890起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '60,890起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '72,890起' },
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '51,490起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '57,490起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '69,490起' },
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '61,480起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '67,480起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '79,480起' },
+            ]
+        //-----------------------------mac-尺寸----------
+        let mac_mode = document.querySelector("#mac_mode");
+        mac_mode.classList.add("btn", "w-100")
+        let set_mac_mode = new Set();
+        let result_mac_mode = mac.filter(item => !set_mac_mode.has(item.mode) ? set_mac_mode.add(item.mode) : false);
+        let mac_mode_Asn = [];
+        for (let i = 0; i < result_mac_mode.length; i++) {
+            let out = document.createElement("div");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_mode_${i + 1}`, "mac_mode_btn", "font-monospace");
+            out.addEventListener('click', function (e) {
+                mac_mode_Asn = mac.filter(x => x.mode == result_mac_mode[i].mode)
+                mac_$.innerHTML = mac_mode_Asn[0].$;
+                console.log(mac_mode_Asn)
+
+                var mac_mode_btn = document.querySelectorAll('.mac_mode_btn');
+                mac_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+
+            })
+            let inside = document.createElement("span");
+            inside.classList.add("d-flex", "flex-column", "test")
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_mac_mode[i].mode;
+            inside.appendChild(inside_span);
+            let span = document.createElement("span");
+            span.innerText = result_mac_mode[i].$;
+            span.classList.add("d-flex", "align-items-center");
+            out.appendChild(inside);
+            out.appendChild(span);
+            mac_mode.appendChild(out);
+        }
+        //-----------------------------mac-SSD 儲存裝置----------
+        let mac_SSD = document.querySelector("#mac_SSD");
+        mac_SSD.classList.add("btn", "w-100")
+        let set_mac_SSD = new Set();
+        let result_mac_SSD = mac.filter(item => !set_mac_SSD.has(item.SSD) ? set_mac_SSD.add(item.SSD) : false);
+        let mac_SSD_Asn = [];
+
+        for (let i = 0; i < result_mac_SSD.length; i++) {
+            let out = document.createElement("div");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_SSD_${i + 1}`, "mac_SSD_btn", "font-monospace");
+            out.addEventListener('click', function (e) {
+                mac_SSD_Asn = mac_mode_Asn.filter(x => x.SSD == result_mac_SSD[i].SSD)
+                mac_$.innerHTML = mac_SSD_Asn[i].$;
+                console.log(mac_SSD_Asn)
+
+                var mac_SSD_btn = document.querySelectorAll('.mac_SSD_btn');
+                mac_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+            let inside = document.createElement("span");
+            inside.classList.add("d-flex", "flex-column", "test")
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_mac_SSD[i].SSD;
+            inside.appendChild(inside_span);
+            let span = document.createElement("span");
+            span.innerText = result_mac_SSD[i].$;
+            span.classList.add("d-flex", "align-items-center");
+            out.appendChild(inside);
+            out.appendChild(span);
+            mac_SSD.appendChild(out);
+        }
+
+        //-----------------------------鍵盤語言----------
+        const keyboard = document.getElementById('keyboard');
+        keyboard.classList.add("form-select")
+        mac_keyboard.forEach((item, index) => {
+            let option = document.createElement('option');
+            option.value = item.format;
+            option.text = item.format;
+            keyboard.add(option, null);
+        })
+        //-----------------------------mac-Final Cut Pro----------
+        let mac_inal_Cut_Pro = document.getElementById('mac_inal_Cut_Pro');
+        mac_inal_Cut_Pro.classList.add("d-flex", "flex-wrap", "btn")
+        let mac_inal_Cut_Pro_Asn = [];
+        let set_mac_inal_Cut_Pro = new Set();
+        let result_mac_inal_Cut_Pro = mac.filter(item => !set_mac_inal_Cut_Pro.has(item.Final_Cut_Pro) ? set_mac_inal_Cut_Pro.add(item.Final_Cut_Pro) : false);
+
+        for (let i = 0; i < result_mac_inal_Cut_Pro.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0", "font-monospace")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A1 = document.createElement('div');
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`, "mac_inal_Cut_Pro_btn")
+            out_A1.addEventListener('click', function (e) {
+                mac_inal_Cut_Pro_Asn = mac_SSD_Asn.filter(x => x.Final_Cut_Pro == result_mac_inal_Cut_Pro[i].Final_Cut_Pro)
+                mac_$.innerHTML = mac_inal_Cut_Pro_Asn[0].$;
+                console.log(mac_inal_Cut_Pro_Asn)
+
+                var mac_inal_Cut_Pro_btn = document.querySelectorAll('.mac_inal_Cut_Pro_btn');
+                mac_inal_Cut_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+            let inside_A1 = document.createElement('span');
+            let inside_span_1_1 = document.createElement('span');
+            inside_span_1_1.innerText = result_mac_inal_Cut_Pro[i].Final_Cut_Pro;
+            inside_A1.appendChild(inside_span_1_1);
+            let inside_span_1_2 = document.createElement('span');
+            inside_span_1_2.innerText = '';
+            inside_A1.appendChild(inside_span_1_2);
+            let inside_sup_1 = document.createElement('sup');
+            inside_sup_1.innerText = '';
+            inside_span_1_2.appendChild(inside_sup_1);
+            let inside_span_1_3 = document.createElement("span");
+            inside_span_1_3.innerText = result_mac_inal_Cut_Pro[i].$;
+            out_A1.appendChild(inside_span_1_3);
+            out_A1.appendChild(inside_A1);
+            out_A1.appendChild(inside_A1);
+            out_B.appendChild(out_A1);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            mac_inal_Cut_Pro.appendChild(out);
+        }
+        //-----------------------------mac-Logic Pro----------
+        let mac_Logic_Pro = document.getElementById('mac_Logic_Pro');
+        mac_Logic_Pro.classList.add("d-flex", "flex-wrap", "btn")
+        let mac_Logic_Pro_Asn = [];
+        let set_mac_Logic_Pro = new Set();
+        let result_mac_Logic_Pro = mac.filter(item => !set_mac_Logic_Pro.has(item.Logic_Pro) ? set_mac_Logic_Pro.add(item.Logic_Pro) : false);
+
+        for (let i = 0; i < result_mac_inal_Cut_Pro.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0", "font-monospace")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A1 = document.createElement('div');
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`, "mac_Logic_Pro_btn")
+            out_A1.addEventListener('click', function (e) {
+                mac_Logic_Pro_Asn = mac_inal_Cut_Pro_Asn.filter(x => x.Logic_Pro == result_mac_Logic_Pro[i].Logic_Pro)
+                mac_Logic_Pro_Asn_$ = "NT$" + (mac_Logic_Pro_Asn[0].$).substring(0, (mac_Logic_Pro_Asn[0].$).length - 1); //删除最后末字符
+                mac_$.innerHTML = mac_Logic_Pro_Asn_$
+                // console.log(mac_Logic_Pro_Asn_$)
+                var mac_Logic_Pro_btn = document.querySelectorAll('.mac_Logic_Pro_btn');
+                mac_Logic_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+            })
+            let inside_A1 = document.createElement('span');
+            let inside_span_1_1 = document.createElement('span');
+            inside_span_1_1.innerText = result_mac_Logic_Pro[i].Logic_Pro;
+            inside_A1.appendChild(inside_span_1_1);
+            let inside_span_1_2 = document.createElement('span');
+            inside_span_1_2.innerText = '';
+            inside_A1.appendChild(inside_span_1_2);
+            let inside_sup_1 = document.createElement('sup');
+            inside_sup_1.innerText = '';
+            inside_span_1_2.appendChild(inside_sup_1);
+            let inside_span_1_3 = document.createElement("span");
+            inside_span_1_3.innerText = result_mac_Logic_Pro[i].$;
+            out_A1.appendChild(inside_span_1_3);
+            out_A1.appendChild(inside_A1);
+            out_A1.appendChild(inside_A1);
+            out_B.appendChild(out_A1);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            mac_Logic_Pro.appendChild(out);
+        }
+        //**********************************************************************************
+        //ipad按鈕
+        let btn1 = document.getElementById('button_A')
+        btn1.addEventListener('click', function () {
+            document.getElementById("iphone").style.display = "block";
+            document.getElementById("ipad").style.display = "none";
+            document.getElementById("mac").style.display = "none";
+        })
+        //ipad按鈕
+        let btn2 = document.getElementById('button_B')
+        btn2.addEventListener('click', function () {
+            document.getElementById("iphone").style.display = "none";
+            document.getElementById("ipad").style.display = "block";
+            document.getElementById("mac").style.display = "none";
+        })
+        //mac按鈕
+        let btn3 = document.getElementById('button_C')
+        btn3.addEventListener('click', function () {
+            document.getElementById("iphone").style.display = "none";
+            document.getElementById("ipad").style.display = "none";
+            document.getElementById("mac").style.display = "block";
+        })
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
